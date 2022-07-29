@@ -51,7 +51,6 @@ function ForgotPassword() {
     if (response.message) {
       setSelected(false);
     }
-    console.log(response);
     setMsg(response.message);
   };
 
@@ -112,4 +111,4 @@ function ForgotPassword() {
   );
 }
 
-export default ForgotPassword();
+export default ForgotPassword;

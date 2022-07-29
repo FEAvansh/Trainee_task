@@ -10,7 +10,6 @@ import {
 } from "../../service/auth.service";
 import { delBody, listBody } from "../../utils/helper";
 import { useLocation } from "react-router-dom";
-import Box from "@mui/material/Box";
 import Cartskeleton from "./Cartskeleton";
 
 export default function Cart() {
@@ -74,8 +73,8 @@ export default function Cart() {
         where: { userId: log },
       })
     );
-    setCart(response.data?.data?.list[0].cartdetail);
-    if (response.data?.data?.list) {
+    setCart(response[0]?.cartdetail);
+    if (response.length > 0) {
       setLoading(false);
     }
 
